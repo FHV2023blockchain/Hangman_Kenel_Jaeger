@@ -1,6 +1,9 @@
 Hangman Smartcontract
 By Rafael Jaeger and Christoph Kenel
 
+Frontend:
+https://fhv2023blockchain.github.io/Hangman_Kenel_Jaeger/
+
 In this smartcontract you can pay to play a game of hangman. If you win you get a reward but if you lose your ETH is gone.
 Contract Address:
 0x885187A8FAa11A1Ef959bAB73f34455d5d14c3e5
