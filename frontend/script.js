@@ -11,7 +11,7 @@ window.addEventListener('load', async () => {
             await ethereum.request({ method: 'eth_requestAccounts' });
             userAccount = ethereum.selectedAddress;
             // Load the contract ABI
-            fetch("../build/contracts/Hangman.json")
+            fetch("./build/contracts/Hangman.json")
                 .then(response => response.json())
                 .then(data => {
                     const contractABI = data.abi; // Make sure this matches the structure of your JSON file
