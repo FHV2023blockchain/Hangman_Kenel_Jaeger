@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; text-align: center; }
+.word-state, .tries-left { font-size: 24px; margin: 20px; }
+.letter-buttons { margin: 10px; }
+.letter-button { margin: 5px; }

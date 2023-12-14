@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Hangman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Blockchain Hangman</h1>
+    <button id="startGame">Start New Game</button>
+    <div class="game-info">
+        <div class="word-state">_ _ _ _ _ _</div>
+        <div class="tries-left">Tries Left: <span id="triesLeft">5</span></div>
+    </div>
+    <div class="letter-buttons" id="letterButtons"></div>
+    <div class="word-guess">
+        <input type="text" id="wordGuessInput" placeholder="Guess the whole word">
+        <button id="guessWordButton">Guess Word</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
