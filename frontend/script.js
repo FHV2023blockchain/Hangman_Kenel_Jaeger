@@ -96,6 +96,7 @@ async function startGame() {
 }
 
 async function guessLetter(letter) {
+    enableGame(false);
     try {
         const result = await contract.methods.guessLetter(web3.utils.asciiToHex(letter.toLowerCase())).send({ from: userAccount });
         console.log("Letter guessed:", letter, result);
@@ -104,15 +105,18 @@ async function guessLetter(letter) {
     } catch (error) {
         console.error("Error guessing letter:", error);
     }
+    enableGame(true);
 }
 
 async function guessWord() {
+    enableGame(false);
     let guess = document.getElementById('wordGuessInput').value;
     guess = guess.trim().toLowerCase();
 
     // Check if the input is not empty
     if (guess === "") {
         alert("Please enter a word to guess.");
+        enableGame(true);
         return;
     }
 
@@ -123,6 +127,7 @@ async function guessWord() {
     } catch (error) {
         console.error("Error guessing the word:", error);
     }
+    enableGame(true);
 }
 
 async function updateCurrentWordState() {
@@ -167,7 +172,7 @@ function displayGameOverMessage(won, reward) {
     document.getElementById('startGame').disabled = false;
     document.getElementById('stakeAmount').disabled = false;
 
-    // Disable the letter buttons
+    // Disable the game
     enableGame(false);
 
     // Reset the word state and tries left
