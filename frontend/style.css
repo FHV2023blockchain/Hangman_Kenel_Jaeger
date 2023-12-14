@@ -2,3 +2,16 @@ body { font-family: Arial, sans-serif; text-align: center; }
 .word-state, .tries-left { font-size: 24px; margin: 20px; }
 .letter-buttons { margin: 10px; }
 .letter-button { margin: 5px; }
+.text { font-size: 12px; margin: 20px; }
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.stake-input {
+    display: flex;
+    align-items: center;
+}
